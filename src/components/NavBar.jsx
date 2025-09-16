@@ -35,7 +35,7 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
-            <a href="#home" className="text-pink-600 font-bold hover:text-pink-700">
+            <a  href="#home" className="text-pink-600 font-bold hover:text-pink-700">
               Home
             </a>
             <a href="#about" className="text-pink-600 font-bold hover:text-pink-700">
@@ -66,19 +66,32 @@ const Navbar = () => {
         <div className={`md:hidden bg-white/20 shadow-md overflow-hidden transition-all duration-700 ease-in-out  ${isOpen?"max-h-60 opacity-100":"max-h-0 opacity-0"}`}>
 
           <div className="flex flex-col space-y-2 p-4">
-            <a href="#home" className="text-pink-700 hover:text-pink-600 font-medium">
+            <a
+            onClick={toggleMenu}
+            href="#home" className="text-pink-700 hover:text-pink-600 font-medium">
               Home
             </a>
-            <a href="#about" className="text-pink-700 hover:text-pink-600 font-medium">
+            <a 
+            onClick={toggleMenu}
+            href="#about" className="text-pink-700 hover:text-pink-600 font-medium">
               About
             </a>
-            <a href="#services" className="text-pink-700 hover:text-pink-600 font-medium">
+            <a
+                        onClick={toggleMenu}
+
+             href="#services" className="text-pink-700 hover:text-pink-600 font-medium">
               Services
             </a>
-            <a href="#skills" className="text-pink-700 hover:text-pink-600 font-medium">
+            <a
+            
+                        onClick={toggleMenu}
+href="#skills" className="text-pink-700 hover:text-pink-600 font-medium">
               Skills
             </a>
-            <a href="#contact" className="text-pink-700 hover:text-pink-600 font-medium">
+            <a
+                        onClick={toggleMenu}
+
+            href="#contact" className="text-pink-700 hover:text-pink-600 font-medium">
               Contact
             </a>
 
