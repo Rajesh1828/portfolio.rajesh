@@ -57,10 +57,10 @@ const Hero = () => {
                     <div className="relative h-7  overflow-hidden">
                         <div className="animate-slide space-y-1">
                             <p>MERN Stack Developer</p>
-                            <p>UI/UX Designer</p>
                             <p>Frontend Developer</p>
                             <p>Backend Developer</p>
-                            <p>Content Creator</p>
+                            <p>Digital Marketing</p>
+                            <p>SEO Specialist</p>
                         </div>
                     </div>
                 </div>
