@@ -9,9 +9,10 @@ const Services = () => {
     "E-commerce sites",
     "Backend",
     "Fullstack",
-    "UI/UX",
-    "UserFriendly",
-    "Responsive",
+    "SEO On-Page",
+    "SEO On-Page",
+    "Digital Marketing",
+    "Responsive Apllictions",
   ];
 
   return (
