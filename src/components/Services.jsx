@@ -10,7 +10,7 @@ const Services = () => {
     "Backend",
     "Fullstack",
     "SEO On-Page",
-    "SEO On-Page",
+    "SEO Off-Page",
     "Digital Marketing",
     "Responsive Apllictions",
   ];
