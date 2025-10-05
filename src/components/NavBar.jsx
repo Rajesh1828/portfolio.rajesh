@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+// import DarkMode from "./DarkMode";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,6 +51,7 @@ const Navbar = () => {
             <a href="#contact" className="text-pink-600 font-bold hover:text-pink-700">
               Contact
             </a>
+            {/* <DarkMode /> */}
           </div>
 
           {/* Mobile Menu Button */}

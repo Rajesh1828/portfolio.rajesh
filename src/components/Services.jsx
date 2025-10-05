@@ -22,7 +22,7 @@ const Services = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="text-4xl font-bold pt-5 text-center text-white"
+        className="text-2xl font-bold pt-5 text-center text-white"
       >
         Services
       </motion.h2>

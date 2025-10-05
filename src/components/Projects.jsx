@@ -1,16 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { assets } from "../assets/assets";
 
 const Projects = () => {
+ const [showAll, setShowAll]= useState(false);
+
   const projectData = [
-    {
+
+       {
       id: 1,
-      title: "E-Commerce App",
-      description: "Full-stack MERN app with cart & JWT auth",
-      img: assets.ecom,
-      demo: "https://tomato-frontend-lxo3.onrender.com",
-      github: "https://github.com/Rajesh1828/tomato.git",
+      title: "Hitech stionary App",
+      description: "build with Mern stack application with admin panel and jwt authentication",
+      img: assets.hitech,
+      demo: "https://hsl-files.vercel.app/",
+      github: "https://github.com/Rajesh1828/hslFiles.git",
     },
+   
     {
       id: 2,
       title: "digital Marketing",
@@ -51,14 +55,15 @@ const Projects = () => {
       demo: "https://estate-cp8m.onrender.com/",
       github: "https://github.com/Rajesh1828/estate.git",
     },
-    {
+     {
       id: 7,
-      title: "Hitech stionary App",
-      description: "build with Mern stack application with admin panel and jwt authentication",
-      img: assets.hitech,
-      demo: "https://hsl-files.vercel.app/",
-      github: "https://github.com/Rajesh1828/hslFiles.git",
+      title: "E-Commerce App",
+      description: "Full-stack MERN app with cart & JWT auth",
+      img: assets.ecom,
+      demo: "https://tomato-frontend-lxo3.onrender.com",
+      github: "https://github.com/Rajesh1828/tomato.git",
     },
+ 
     {
       id: 8,
       title: "Bl NutriFood App",
@@ -87,9 +92,17 @@ const Projects = () => {
 
   ];
 
+const visibleProjects = showAll ? projectData : projectData.slice(0,3)
+
+
+  const toggleShowAll = () => {
+    setShowAll(!showAll);
+  };
+
+  
   return (
     <div className="w-full h-auto  bg-black/30 md:px-10 md:py-10" id="projects">
-      <h2 className="text-4xl font-bold text-center text-white">Projects</h2>
+      <h2 className="text-2xl font-bold text-center text-white">Projects</h2>
 
       <div className="flex items-center justify-center gap-2 mt-3">
         <div className="w-[100px] rounded-4xl h-1 bg-pink-600"></div>
@@ -98,8 +111,8 @@ const Projects = () => {
       </div>
 
       {/* Cards Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 px-10 mt-8 ">
-        {projectData.map((project) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-10 mt-8 ">
+        {visibleProjects.map((project) => (
           <div
             key={project.id}
             className="bg-white/20 rounded-lg shadow-md overflow-hidden"
@@ -107,7 +120,7 @@ const Projects = () => {
             <img
               src={project.img}
               alt={project.title}
-              className="w-full h-40 object-cover"
+              className="w-full h-60 object-cover"
             />
             <div className="p-2">
               <h3 className="text-sm font-semibold mb-2 text-amber-50">{project.title}</h3>
@@ -121,21 +134,31 @@ const Projects = () => {
                 >
                   Demo
                 </a>
-                <a
+                {/* <a
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white font-bold hover:underline"
                 >
                   GitHub
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
         ))}
-
-
       </div>
+
+<div className="flex justify-center mt-4">
+  <button
+  className="text-white font-bold hover:underline bg-pink-600 px-4 py-2 rounded-md "
+  onClick={() => toggleShowAll()}
+  >
+view {showAll ? "less" : "more"}
+
+  </button>
+
+</div>
+
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React from "react";
 import { assets } from "../assets/assets";
-import { Instagram,Linkedin, Github } from "lucide-react";
+import { Instagram,Linkedin, Github, Mail, Phone, Map } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Contact = () => {
@@ -11,7 +11,7 @@ const Contact = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         viewport={{ once: true }}
-      className="text-4xl font-bold text-center text-white pt-5">
+      className="text-2xl font-bold text-center text-white pt-5">
         Contact Me
       </motion.h2>
 
@@ -37,14 +37,14 @@ const Contact = () => {
         transition={{ duration: 0.6, ease: "easeOut" }}
         viewport={{ once: true }}
         className="flex flex-col gap-4 w-full md:w-1/2 text-white">
-          <p>
-            <b>Email:</b> sonti8747@gmail.com
+          <p className="flex items-center gap-5">
+            <b> <Mail /> </b> sonti8747@gmail.com
           </p>
-          <p>
-            <b>Phone:</b> +91 8179575173
+          <p className="flex items-center gap-5">
+            <b> <Phone /></b> +91 8179575173
           </p>
-          <p>
-            <b>Address:</b> Repalle, Andhra Pradesh
+          <p className="flex items-center gap-5">
+            <b> <Map /> </b> Repalle, Andhra Pradesh
           </p>
           <p>Adavuladeevi, 522262</p>
                                       <div className="absolute  rounded-full w-20 h-20 bg-pink-500  custom-ping"></div>
